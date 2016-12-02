@@ -17,7 +17,7 @@ local text = matches[1]
       else
   local url = "http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&text="..textc
   local receiver = get_receiver(msg)
-  local file = download_to_file(url,'TeleBeyond-Tts.mp3')
+  local file = download_to_file(url,'voice-climaxit.mp3')
       send_audio('channel#id'..msg.to.id, file, ok_cb , false)
 end
 end
@@ -25,10 +25,10 @@ end
 return {
   description = "text to voice",
   usage = {
-    "!voice [text]"
+    "!vc [text]"
   },
   patterns = {
-    "^[!/#]voice +(.*)$"
+    "^[!/#]vc +(.*)$"
 
   },
   run = run
