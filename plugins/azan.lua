@@ -95,7 +95,7 @@ end
 return {
   patterns = {
 		"^[.,][Aa]zan (.*)$",
-		"^[.,]([Aa]zan)$"
+		"^[.,]([Aa]zan)$",
 		"^[Aa]zan (.*)$",
 		"^([Aa]zan)$"
 	      }, 
