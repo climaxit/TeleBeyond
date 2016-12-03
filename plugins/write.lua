@@ -139,6 +139,7 @@ local function run(msg, matches)
 		result_text = result_text..a.."- "..result[a].."\n\n"
 	end
 	return result_text.."_____________\n💠@ClimaxIT"
+	send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 
 return {
