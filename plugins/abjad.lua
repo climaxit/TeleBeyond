@@ -99,8 +99,8 @@ text , num = abjad(text,num,'ض')
 text , num = abjad(text,num,'ظ')
 text , num = abjad(text,num,'غ')
 if text ~= '' then
-  local text = 'فقط زبان فارسی پشتیبانی میشود'  
-  send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
+  local amir = 'فقط زبان فارسی پشتیبانی میشود'  
+  send_api_msg(msg, get_receiver_api(msg), amir, true, 'md')
 end
 local text = 'عدد ابجد کبیر : '..num
 send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
