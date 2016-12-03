@@ -89,8 +89,7 @@ function run(msg, matches)
 	if string.match(text, '7') then text = string.gsub(text, '7', '۷') end
 	if string.match(text, '8') then text = string.gsub(text, '8', '۸') end
 	if string.match(text, '9') then text = string.gsub(text, '9', '۹') end
-	local text = text
-	send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
+	return send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 
 return {
