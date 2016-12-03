@@ -100,7 +100,8 @@ text , num = abjad(text,num,'غ')
 if text ~= '' then
   return 'فقط زبان فارسی پشتیبانی میشود'  
 end
-return 'عدد ابجد کبیر : '..num
+local text = 'عدد ابجد کبیر : '..num
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
     end
   return {
 patterns = {
