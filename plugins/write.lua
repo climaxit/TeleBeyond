@@ -141,7 +141,7 @@ local function run(msg, matches)
 	return result_text.."_____________\n💠@ClimaxIT"
 	send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
-
+end
 return {
 	description = "Fantasy Writer",
 	usagehtm = '<tr><td align="center">write متن</td><td align="right">با استفاده از این پلاگین میتوانید متون خود را با فونت های متنوع و زیبایی طراحی کنید. حد اکثر کاراکتر های مجاز 20 عدد میباشد و فقط میتوانید از حروف انگلیسی و اعداد استفاده کنید</td></tr>',
