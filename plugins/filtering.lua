@@ -189,14 +189,14 @@ local function history(extra, suc, result)
 end
 
 --Functions.
-function run(msg, matches)
+--[[function run(msg, matches)
   one = io.open("./system/team", "r")
   two = io.open("./system/channel", "r")
   local team = one:read("*all")
   local channel = two:read("*all")
  if is_sudo(msg) then
     local receiver = get_receiver(msg)
-    local group = msg.to.id
+    local group = msg.to.id]]
     
       if msg.reply_id and matches[1] == "file" and matches[2] and matches[3] then
         adress = matches[2]
