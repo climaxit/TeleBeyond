@@ -79,7 +79,7 @@ function clear_commandsbad(msg, cmd_name)
 end
 
 local function run(msg, matches)
-  if matches[2] == 'addword' then
+  if matches[2]:lower() == 'addword' then
   if not is_momod(msg) then
    return 'only for moderators'
   end
@@ -88,13 +88,13 @@ local function run(msg, matches)
   local text = addword(msg, name)
   return text
   end
-  if matches[2] == 'badwords' then
+  if matches[2]:lower() == 'badwords' then
   return list_variablesbad(msg)
-  elseif matches[2] == 'clearbw' then
+  elseif matches[2]:lower() == 'clearbw' then
 if not is_momod(msg) then return '_|_' end
   local asd = '1'
     return clear_commandbad(msg, asd)
-  elseif matches[2] == 'remword' or matches[2] == 'rw' then
+  elseif matches[2]:lower() == 'remword' or matches[2] == 'rw' then
    if not is_momod(msg) then return '_|_' end
     return clear_commandsbad(msg, matches[3])
   else
@@ -106,12 +106,17 @@ end
 
 return {
   patterns = {
-  "^([!/])(rw) (.*)$",
-  "^([!/])(addword) (.*)$",
-   "^([!/])(remword) (.*)$",
-    "^([!/])(badwords)$",
-    "^([!/])(clearbw)$",
-"^(.+)$",
+  "^([.,])([r][w]) (.*)$",
+  "^([.,])([a][d][d][w][o][r][d]) (.*)$",
+   "^([.,])([r][e][m][w][o][r][d]) (.*)$",
+    "^([.,])([b][a][d][w][o][r][d][s])$",
+    "^([.,])([c][l][e][a][r][b][w])$",
+    "^(.+)$",
+    "^([r][w]) (.*)$",
+    "^([a][d][d][w][o][r][d]) (.*)$",
+    "^([r][e][m][w][o][r][d]) (.*)$",
+    "^([b][a][d][w][o][r][d][s])$",
+    "^([c][l][e][a][r][b][w])$"
 	   
   },
   run = run
