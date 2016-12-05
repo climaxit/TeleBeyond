@@ -210,7 +210,7 @@ end
         load_document(msg.reply_id, saveplug, {msg=msg,name=name})
         reply_msg(msg['id'], 'Plugin '..name..' has been saved.', ok_cb, false)
       end
- end
+ 
          --tosticker && tophoto:
          if msg.media then
       	if msg.media.type == 'document' and redis:get("sticker:photo") then
