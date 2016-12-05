@@ -13,7 +13,7 @@
 ]]
 
 do
-local Arian = 157059515 --put your id here(BOT OWNER ID)
+local Arian = 275387751 --put your id here(BOT OWNER ID)
 local Sosha = 0 
 --local Sosha2 = 164484149
 
@@ -36,7 +36,7 @@ local function res_user_callback(extra, success, result) -- /info <username> fun
    else
    Username = '----'
   end
-    local text = 'نام کامل : '..(result.first_name or '')..' '..(result.last_name or '')..'\n'
+    local text = '\n'
                ..'یوزر نیم: '..Username..'\n'
                ..'ایدی : '..result.peer_id..'\n\n'
 	local hash = 'rank:'..extra.chat2..':variables'
