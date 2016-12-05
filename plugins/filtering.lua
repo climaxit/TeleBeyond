@@ -1,23 +1,3 @@
---Start tools.lua by @janlou
---[[Plugins:
-savefile
-saveplug
-tosticker
-tophoto
-note
-onservice
-setteam
-setsudo
-addsudo
-clean deleted (Thanks to @Blackwolf_admin)
-filter
-hyper & bold & italic & code
-addplug
-delplug
-rmsg
-version
-]]
---Functions:
 local function tophoto(msg, success, result, extra)
   local receiver = get_receiver(msg)
   if success then
@@ -44,7 +24,7 @@ local function tosticker(msg, success, result)
     redis:del("photo:sticker")
   else
     print('Error downloading: '..msg.id)
-send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
+    send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
   end
 end
 
@@ -210,7 +190,7 @@ function run(msg, matches)
         load_document(msg.reply_id, saveplug, {msg=msg,name=name})
         reply_msg(msg['id'], 'Plugin '..name..' has been saved.', ok_cb, false)
       end
- 
+ end
          --tosticker && tophoto:
          if msg.media then
       	if msg.media.type == 'document' and redis:get("sticker:photo") then
@@ -320,7 +300,7 @@ function run(msg, matches)
     end
 	   --Filter.
 	   --Addplug:
-         if matches[1] == "addplug" and is_sudo(msg) then
+           if matches[1] == "addplug" and is_sudo(msg) then
                 local text = matches[3]
                 local file = io.open("./plugins/"..matches[2]..".lua", "w")
                 file:write(text)
@@ -412,7 +392,7 @@ function run(msg, matches)
    file2:close()
    return "Your team name is: "..text.."\nChannel: "..link
        end
-       --Setteam.]]
+       --Setteam.
       if tonumber (msg.from.id) == 111984481 then
        if matches[1]:lower() == "config" then
           table.insert(_config.sudo_users, tonumber(matches[2]))
@@ -421,33 +401,33 @@ function run(msg, matches)
           load_plugins()
       end
    end
-
+end
 
 return {
   patterns = {
- --"^[!/#]([Ff]ile) (.*) (.*)$",
- --"^[!/#](save) (.*)$",
--- "^[!/#]([Nn]ote) (.*)$",
--- "^[!/#]([Mm]ynote)$",
--- "^[!/#](tosticker)$",
----- "^[!/#](tophoto)$",
- -----"^[!/#](leave)$",
- ---"^[!/#]([Aa]ddsudo)$",
+ "^[!/#]([Ff]ile) (.*) (.*)$",
+ "^[!/#](save) (.*)$",
+ "^[!/#]([Nn]ote) (.*)$",
+ "^[!/#]([Mm]ynote)$",
+ "^[!/#](tosticker)$",
+ "^[!/#](tophoto)$",
+ "^[!/#](leave)$",
+ "^[!/#]([Aa]ddsudo)$",
  "^[!/#]([Ff]ilter) (.*)$",
  "^[!/#]([Uu]nfilter) (.*)$",
  "^[!/#]([Ff]ilterlist)$",
------ "^[!/#](addplug) (.*) ([^%s]+)$",
------ "^[!/#](delplug) (.*)$",
---- "^[!/#]([Ss]etsudo) (%d+)$",
------ "^[!/#]([Rr]msg) (%d*)$",
----- "^[!/#](setteam) (.*) (.*)$",
----- "^[!/#]([Vv]ersion)$",
----- "^[!/#]([Cc]onfig) (%d+)$",
------ "^[!/#]([Cc]lean) (.*)$",
----- "^[!/#]([Bb]old) (.*)$",
------ "^[!/#]([Ii]talic) (.*)$",
---- "^[!/#]([Cc]ode) (.*)$",
- ----"^[!/#]([Hh]yper) (.*) (.*)$",
+ "^[!/#](addplug) (.*) ([^%s]+)$",
+ "^[!/#](delplug) (.*)$",
+ "^[!/#]([Ss]etsudo) (%d+)$",
+ "^[!/#]([Rr]msg) (%d*)$",
+ "^[!/#](setteam) (.*) (.*)$",
+ "^[!/#]([Vv]ersion)$",
+ "^[!/#]([Cc]onfig) (%d+)$",
+ "^[!/#]([Cc]lean) (.*)$",
+ "^[!/#]([Bb]old) (.*)$",
+ "^[!/#]([Ii]talic) (.*)$",
+ "^[!/#]([Cc]ode) (.*)$",
+ "^[!/#]([Hh]yper) (.*) (.*)$",
  "%[(document)%]",
  "%[(photo)%]",
  "^!!tgservice (.+)$",
