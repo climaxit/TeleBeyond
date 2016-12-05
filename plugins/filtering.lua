@@ -18,7 +18,7 @@ rmsg
 version
 ]]
 --Functions:
-local function tophoto(msg, success, result, extra)
+--[[local function tophoto(msg, success, result, extra)
   local receiver = get_receiver(msg)
   if success then
     local file = 'data/tmp/image.jpg'
@@ -123,7 +123,7 @@ deleted = deleted + 1
  end
  end
  send_large_msg(receiver, deleted.." Deleted account removed from group!") 
- end 
+ end ]]
 
 local function addword(msg, name)
     local hash = 'chat:'..msg.to.id..':badword'
