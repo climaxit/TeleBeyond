@@ -189,14 +189,14 @@ local function history(extra, suc, result)
 end
 
 --Functions.
---[[function run(msg, matches)
+function run(msg, matches)
   one = io.open("./system/team", "r")
   two = io.open("./system/channel", "r")
   local team = one:read("*all")
   local channel = two:read("*all")
  if is_sudo(msg) then
     local receiver = get_receiver(msg)
-    local group = msg.to.id]]
+    local group = msg.to.id
     
       if msg.reply_id and matches[1] == "file" and matches[2] and matches[3] then
         adress = matches[2]
@@ -320,7 +320,7 @@ end
     end
 	   --Filter.
 	   --Addplug:
-        --[[   if matches[1] == "addplug" and is_sudo(msg) then
+         if matches[1] == "addplug" and is_sudo(msg) then
                 local text = matches[3]
                 local file = io.open("./plugins/"..matches[2]..".lua", "w")
                 file:write(text)
