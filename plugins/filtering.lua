@@ -421,7 +421,7 @@ end
           load_plugins()
       end
    end
-end
+
 
 return {
   patterns = {
