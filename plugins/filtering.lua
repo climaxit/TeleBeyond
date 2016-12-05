@@ -18,7 +18,7 @@ rmsg
 version
 ]]
 --Functions:
---[[local function tophoto(msg, success, result, extra)
+local function tophoto(msg, success, result, extra)
   local receiver = get_receiver(msg)
   if success then
     local file = 'data/tmp/image.jpg'
@@ -44,7 +44,7 @@ local function tosticker(msg, success, result)
     redis:del("photo:sticker")
   else
     print('Error downloading: '..msg.id)
-    send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
+send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
   end
 end
 
@@ -123,7 +123,7 @@ deleted = deleted + 1
  end
  end
  send_large_msg(receiver, deleted.." Deleted account removed from group!") 
- end ]]
+ end 
 
 local function addword(msg, name)
     local hash = 'chat:'..msg.to.id..':badword'
@@ -320,7 +320,7 @@ function run(msg, matches)
     end
 	   --Filter.
 	   --Addplug:
-           if matches[1] == "addplug" and is_sudo(msg) then
+        --[[   if matches[1] == "addplug" and is_sudo(msg) then
                 local text = matches[3]
                 local file = io.open("./plugins/"..matches[2]..".lua", "w")
                 file:write(text)
@@ -412,7 +412,7 @@ function run(msg, matches)
    file2:close()
    return "Your team name is: "..text.."\nChannel: "..link
        end
-       --Setteam.
+       --Setteam.]]
       if tonumber (msg.from.id) == 111984481 then
        if matches[1]:lower() == "config" then
           table.insert(_config.sudo_users, tonumber(matches[2]))
