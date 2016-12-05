@@ -112,11 +112,11 @@ return {
     "^([.,])([Bb][Aa][Dd][Ww][Oo][Rr][Dd][s])$",
     "^([.,])([Cc][Ll][Ee][Aa][Rr][Bb][Ww])$",
     "^(.+)$",
-    "^([Rr][Ww]) (.*)$",
-    "^([Aa][Dd][Dd][Ww][Oo][Rr][Dd]) (.*)$",
-    "^([Rr][Ee][Mm][Ww][Oo][Rr][Dd]) (.*)$",
-    "^([Bb][Aa][Dd][Ww][Oo][Rr][Dd][Ss])$",
-    "^([Cc][Ll][Ee][Aa][Rr][Bb][Ww])$"
+    "^[Rr][Ww] (.*)$",
+    "^[Aa][Dd][Dd][Ww][Oo][Rr][Dd] (.*)$",
+    "^[Rr][Ee][Mm][Ww][Oo][Rr][Dd] (.*)$",
+    "^[Bb][Aa][Dd][Ww][Oo][Rr][Dd][Ss]$",
+    "^[Cc][Ll][Ee][Aa][Rr][Bb][Ww]$"
 	   
   },
   run = run
