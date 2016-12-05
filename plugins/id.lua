@@ -36,7 +36,7 @@ local function res_user_callback(extra, success, result) -- /info <username> fun
    else
    Username = '----'
   end
-    local text = '\n'
+    local text = 'id :\n'
                ..'یوزر نیم: '..Username..'\n'
                ..'ایدی : '..result.peer_id..'\n\n'
 	local hash = 'rank:'..extra.chat2..':variables'
