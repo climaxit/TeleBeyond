@@ -79,44 +79,44 @@ function clear_commandsbad(msg, cmd_name)
 end
 
 local function run(msg, matches)
-  if matches[2]:lower() == 'addword' then
+  if matches[1]:lower() == 'addword' then
   if not is_momod(msg) then
    return 'only for moderators'
   end
-  local name = string.sub(matches[3], 1, 50)
+  local name = string.sub(matches[2], 1, 50)
 
   local text = addword(msg, name)
   return text
   end
-  if matches[2]:lower() == 'badwords' then
+  if matches[1]:lower() == 'badwords' then
   return list_variablesbad(msg)
-  elseif matches[2]:lower() == 'clearbw' then
+  elseif matches[1]:lower() == 'clearbw' then
 if not is_momod(msg) then return '_|_' end
   local asd = '1'
     return clear_commandbad(msg, asd)
-  elseif matches[2]:lower() == 'remword' or matches[2] == 'rw' then
+  elseif matches[1]:lower() == 'remword' or matches[1] == 'rw' then
    if not is_momod(msg) then return '_|_' end
-    return clear_commandsbad(msg, matches[3])
+    return clear_commandsbad(msg, matches[2])
   else
     local name = user_print_name(msg.from)
   
-    return list_variables2(msg, matches[1])
+    return list_variables2(msg, matches[2])
   end
 end
 
 return {
   patterns = {
-  "^([.,])([Rr][Ww]) (.*)$",
-  "^([.,])([Aa][Dd][Dd][Ww][Oo][Rr][Dd]) (.*)$",
-   "^([.,])([Rr][Ee][m][Ww][Oo][Rr][Dd]) (.*)$",
-    "^([.,])([Bb][Aa][Dd][Ww][Oo][Rr][Dd][s])$",
-    "^([.,])([Cc][Ll][Ee][Aa][Rr][Bb][Ww])$",
+  "^[.,]([Rr][Ww]) (.*)$",
+  "^[.,]([Aa][Dd][Dd][Ww][Oo][Rr][Dd]) (.*)$",
+   "^[.,]([Rr][Ee][m][Ww][Oo][Rr][Dd]) (.*)$",
+    "^[.,]([Bb][Aa][Dd][Ww][Oo][Rr][Dd][Ss])$",
+    "^[.,]([Cc][Ll][Ee][Aa][Rr][Bb][Ww])$",
     "^(.+)$",
-    "^[Rr][Ww] (.*)$",
-    "^[Aa][Dd][Dd][Ww][Oo][Rr][Dd] (.*)$",
-    "^[Rr][Ee][Mm][Ww][Oo][Rr][Dd] (.*)$",
-    "^[Bb][Aa][Dd][Ww][Oo][Rr][Dd][Ss]$",
-    "^[Cc][Ll][Ee][Aa][Rr][Bb][Ww]$"
+    "^([Rr][Ww] (.*)$",
+    "^([Aa][Dd][Dd][Ww][Oo][Rr][Dd]) (.*)$",
+    "^([Rr][Ee][Mm][Ww][Oo][Rr][Dd]) (.*)$",
+    "^([Bb][Aa][Dd][Ww][Oo][Rr][Dd][Ss])$",
+    "^([Cc][Ll][Ee][Aa][Rr][Bb][Ww])$"
 	   
   },
   run = run
