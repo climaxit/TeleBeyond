@@ -13,7 +13,7 @@
 ]]
 
 do
-local Arian = 275387751 --put your id here(BOT OWNER ID)
+local Arian = 157059515 --put your id here(BOT OWNER ID)
 local Sosha = 0 
 --local Sosha2 = 164484149
 
