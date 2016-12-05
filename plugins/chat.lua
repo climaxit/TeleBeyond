@@ -9,10 +9,10 @@ end
 if msg.text == "چه خبر" then
 	return reply_msg(msg.id,  "سلامتی", ok_cb, false)
 end
-if msg.text == "تله بیوند" then
+--[[if msg.text == "تله بیوند" then
 	return reply_msg(msg.id, "بلی؟", ok_cb, false)
-end
-if msg.text == "سعید" then
+end]]
+--[[if msg.text == "سعید" then
 	return reply_msg(msg.id, "مآی فادِر بیا این دئوث کارت داره😐", ok_cb, false)
 end
 if msg.text == "Solid" then
@@ -47,13 +47,13 @@ if msg.text == "beyond team" then
 end
 if msg.text == "Beyond team" then
 	return reply_msg(msg.id, "Best Team Of Telegram😎", ok_cb, false)
-end
+end]]
 if msg.text == "ربات" then
 	return reply_msg(msg.id, "وات؟😐", ok_cb, false)
 end
-if msg.text == "کانال" then
+--[[if msg.text == "کانال" then
 	return reply_msg(msg.id, "کانال تیم @BeyondTeam", ok_cb, false)
-end
+end]]
 if msg.text == "امبرلا" then
 	return reply_msg(msg.id, "اسم اصلیش چسبرلاست😂", ok_cb, false)
 end
@@ -61,7 +61,7 @@ if msg.text == "xy" then
 	return reply_msg(msg.id, "چخه😐", ok_cb, false)
 end
 if msg.text == "/start" then
-	return reply_msg(msg.id, "میخاری؟", ok_cb, false)
+	return reply_msg(msg.id, "start nadarim \n boro jaye dige ", ok_cb, false)
 end
 if msg.text == "نوا" then
 	return reply_msg(msg.id, "چس اسپمر نگاییدم", ok_cb, false)
@@ -69,7 +69,7 @@ end
 if msg.text == "سلید" then
 	return reply_msg(msg.id, "مآی فادِر بیا این دئوث کارت داره😐", ok_cb, false)
 end
-if msg.text == "telebeyond" then
+--[[if msg.text == "telebeyond" then
 	return reply_msg(msg.id, "What?", ok_cb, false)
 end
 if msg.text == "Telebeyond" then
@@ -77,7 +77,7 @@ if msg.text == "Telebeyond" then
 end
 if msg.text == "TeleBeyond" then
 	return reply_msg(msg.id, "بلی؟", ok_cb, false)
-end
+end]]
 if msg.text == "bot" then
 	return reply_msg(msg.id, "😐؟", ok_cb, false)
 end
@@ -96,9 +96,9 @@ end
 if msg.text == "Bye" then
 	return reply_msg(msg.id, "Bye😐✋", ok_cb, false)
 end
-if msg.text == "ممشوتک" then
+--[[if msg.text == "ممشوتک" then
 	return reply_msg(msg.id, "نگاییدم", ok_cb, false)
-end
+end]]
 if msg.text == "سلام" and is_sudo(msg) then
 	return reply_msg(msg.id, "😐✋سلام مآی فادِر", ok_cb, false)
     else
