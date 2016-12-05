@@ -36,36 +36,36 @@ local function res_user_callback(extra, success, result) -- /info <username> fun
    else
    Username = '----'
   end
-    local text = 'نام کامل : '..(result.first_name or '')..' '..(result.last_name or '')..'\n'
-               ..'یوزر نیم: '..Username..'\n'
-               ..'ایدی : '..result.peer_id..'\n\n'
+    local text = 'Full Name : '..(result.first_name or '')..' '..(result.last_name or '')..'\n'
+               ..'UserName : '..Username..'\n'
+               ..'id num : '..result.peer_id..'\n'
 	local hash = 'rank:'..extra.chat2..':variables'
 	local value = redis:hget(hash, result.peer_id)
     if not value then
 	 if result.peer_id == tonumber(Arian) then
-	   text = text..'مقام : ادمین کل ربات (Executive Admin) \n\n'
+	   text = text..'مقام : ادمین کل ربات (Executive Admin) \n'
 	   elseif result.peer_id == tonumber(Sosha) then
-	   text = text..'Rank : ادمین ارشد ربات (Full Access Admin) \n\n'
+	   text = text..'Rank : ادمین ارشد ربات (Full Access Admin) \n'
 	   --elseif result.peer_id == tonumber(Sosha2) then
 	   --text = text..'Rank : مدیر ارشد ربات (Full Access Admin) \n\n'
 	  elseif is_admin2(result.peer_id) then
-	   text = text..' مقام : ادمین (Admin)\n\n'
+	   text = text..' مقام : ادمین (Admin)\n'
 	  elseif is_owner2(result.peer_id, extra.chat2) then
-	   text = text..'مقام : صاحب گروه (Owner) \n\n'
+	   text = text..'مقام : صاحب گروه (Owner) \n'
 	  elseif is_momod2(result.peer_id, extra.chat2) then
-	    text = text..'مقام : مدیر (Moderator) \n\n'
+	    text = text..'مقام : مدیر (Moderator) \n'
       else
-	    text = text..'مقام : کاربر (Member) \n\n'
+	    text = text..'مقام : کاربر (Member) \n'
 	 end
    else
-   text = text..'مقام : '..value..'\n\n'
+   text = text..'Rank : '..value..'\n'
   end
   local uhash = 'user:'..result.peer_id
   local user = redis:hgetall(uhash)
   local um_hash = 'msgs:'..result.peer_id..':'..extra.chat2
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
-  text = text..'تعداد پیام های فرستاده : : '..user_info_msgs..'\n\n'
-  text = text..'@BeyondTeam'
+  text = text..'Total messages : : '..user_info_msgs..'\n\n'
+  text = text..''
   send_msg(extra.receiver, text, ok_cb, true)
   else
 	send_msg(extra.receiver, ' Username not found.', ok_cb, false)
