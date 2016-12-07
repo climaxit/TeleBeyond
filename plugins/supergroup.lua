@@ -121,10 +121,10 @@ end
 --Get and output info about supergroup
 local function callback_info(cb_extra, success, result)
 local title ="👥 اطلاعات سوپر گروه ["..result.title.."]\n\n"
-local user_num = "👤 تعداد عضو: "..result.participants_count.."\n"
-local admin_num = "👮🏻 تعداد ادمین: "..result.admins_count.."\n"
-local kicked_num = "💂🏿 تعداد افراد اخراج شده: "..result.kicked_count.."\n\n"
-local channel_id = "🆔 آیدی سوپر گروه: "..result.peer_id.."\n"
+local user_num = "👤 تعداد عضو : "..result.participants_count.."\n"
+local admin_num = "👮🏻 تعداد ادمین : "..result.admins_count.."\n"
+local kicked_num = "💂🏿 تعداد افراد اخراج شده : "..result.kicked_count.."\n"
+local channel_id = "🆔 آیدی سوپر گروه : "..result.peer_id.."\n"
 if result.username then
 	channel_username = "Username: @"..result.username
 else
