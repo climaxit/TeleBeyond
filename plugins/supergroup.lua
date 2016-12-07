@@ -896,7 +896,7 @@ function show_supergroup_mutes(msg, target)
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  	local text = "*MuteList For :*\n*["..msg.to.print_name:gsub("_"," ").."]*\n\n_Mute All : "..settings.mute_all.."_\n_Mute Text : "..settings.mute_text.."_\n_Mute Sticker : "..settings.lock_sticker.."_\n_Mute Photo : "..settings.mute_photo.."_\n_Mute Video : "..settings.mute_video.."_\n_Mute Audio : "..settings.mute_audio.."_\n_Mute Gifs : "..settings.mute_gif.."_\n_Mute Contact : "..settings.lock_contacts.."_\n_Mute File : "..settings.mute_doc.."_\n_Mute Forward : "..settings.mute_forward.."_\n_Mute Reply : "..settings.mute_reply.."_\n_Mute Emoji : "..settings.mute_emoji.."_\n_Mute TgService : "..settings.mute_service.."_\n\n"
+  	local text = "*MuteList For :*\n*["..msg.to.print_name:gsub("_"," ").."]*\n\n_Mute All : "..settings.mute_all.."_\n_Mute Text : "..settings.mute_text.."_\n_Mute Sticker : "..settings.lock_sticker.."_\n_Mute Photo : "..settings.mute_photo.."_\n_Mute Video : "..settings.mute_video.."_\n_Mute Audio : "..settings.mute_audio.."_\n_Mute Gifs : "..settings.mute_gif.."_\n_Mute Contact : "..settings.lock_contacts.."_\n_Mute File : "..settings.mute_doc.."_\n_Mute Forward : "..settings.mute_forward.."_\n_Mute Reply : "..settings.mute_reply.."_\n_Mute Emoji : "..settings.mute_emoji.."_\n_Mute TgService : "..settings.mute_service.."_\n\nchannel for help you:\n@ClimaxitHelp"
 local text = string.gsub(text,'yes','🔇')
   local text = string.gsub(text,'no','🔊')
 send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
