@@ -91,7 +91,7 @@ local function bot_stats()
   return text
 end
 local function run(msg, matches)
-  if matches[1]:lower() == 'beyond' then -- Put everything you like :)
+  if matches[1]:lower() == 'climaxit' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
     savelog(msg.to.id, name.." ["..msg.from.id.."] used /teleseed ")
@@ -122,7 +122,7 @@ send_document(get_receiver(msg), "./data/telebeyond.gif", ok_cb, false)
         return
       end
     end
-    if matches[2] == "beyond" then -- Put everything you like :)
+    if matches[2] == "climaxit" then -- Put everything you like :)
       if not is_admin1(msg) then
         return "For admins only !"
       else
@@ -144,8 +144,8 @@ return {
     "^[#!/]([Ss]tats)$",
     "^[#!/]([Ss]tatslist)$",
     "^[#!/]([Ss]tats) (group) (%d+)",
-    "^[#!/]([Ss]tats) (beyond)",
-	"^[#!/]([Bb]eyond)"
+    "^[#!/]([Ss]tats) (climaxit)",
+	"^[#!/]([Cc]limaxit)"
     }, 
   run = run
 }
