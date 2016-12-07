@@ -7,7 +7,8 @@ return {
   description = "Reply Your Sent Message",
   usage = "/code (message) : reply message",
   patterns = {
-    "^[!/#]code +(.+)$"
+    "^[!/]code +(.+)$",
+    "^code +(.+)$"
   }, 
 	run = run,
 	moderated = true
