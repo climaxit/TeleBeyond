@@ -235,7 +235,7 @@ end
     return "#Error\nIn one minute you can ask for your support"
     elseif not is_feedback then
      redis:set(feedback_hash, true)
-  fwd_msg('user#id184413821', msg.reply_id, ok_cb, false)
+  fwd_msg('user#id275387751', msg.reply_id, ok_cb, false)
 return 'Your question was sent successfully (by Reply)'
 end
  end
