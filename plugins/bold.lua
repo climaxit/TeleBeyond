@@ -7,7 +7,7 @@ return {
   description = "Reply Your Sent Message",
   usage = "/echo (message) : reply message",
   patterns = {
-	"^[.,][Bb]old +(.+)$",
+	"^[!/][Bb]old +(.+)$",
 	"^[Bb]old +(.+)$"
   }, 
 	run = run,
