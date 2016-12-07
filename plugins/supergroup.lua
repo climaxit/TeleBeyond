@@ -199,7 +199,7 @@ local function lock_group_links(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_link'] = 'yes'
     save_data(_config.moderation.data, data)
-    return '.ضد تبلیغ فعال شد ✅'
+    return '✅ ضد تبلیغ فعال شد.'
   end
 end
 
@@ -213,7 +213,7 @@ local function unlock_group_links(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_link'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'ضد تبلیغ غیرفعال شد'
+    return '✅ ضد تبلیغ غیر'
   end
 end
 
@@ -228,7 +228,7 @@ local function lock_group_cmd(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_cmd'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'قفل دستورات فعال شد'
+    return '✅ قفل دستورات فعال شد.'
   end
 end
 
@@ -256,7 +256,7 @@ local function lock_group_url(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_url'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'ضد Url فعال شد'
+    return '✅ قفل لینک فعال شد.'
   end
 end
 
@@ -287,7 +287,7 @@ local function lock_group_spam(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_spam'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'ضد اسپم فعال شد'
+    return '✅ ضد اسپم فعال شد.'
   end
 end
 
@@ -315,7 +315,7 @@ local function lock_group_flood(msg, data, target)
   else
     data[tostring(target)]['settings']['flood'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'ضد فلود فعال شد'
+    return '✅ ضد فلود فعال شد.'
   end
 end
 
@@ -372,7 +372,7 @@ local function lock_group_membermod(msg, data, target)
     data[tostring(target)]['settings']['lock_member'] = 'yes'
     save_data(_config.moderation.data, data)
   end
-  return 'کاربران گروه قفل شدند'
+  return '✅ قفل کاربران فعال شد.'
 end
 
 local function unlock_group_membermod(msg, data, target)
@@ -399,7 +399,7 @@ local function lock_group_bots(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_bots'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'محافظت دربرابر ورود ربات ها فعال شد.'
+    return '✅ قفل ربات فعال شد.'
   end
 end
 
@@ -427,7 +427,7 @@ return 'ضد تگ از قبل فعال بود'
 else
 data[tostring(target)]['settings']['lock_tags'] = 'yes'
 save_data(_config.moderation.data, data)
-return 'ضد تگ فعال شد'
+return '✅ ضد تگ فعال شد.'
 end
 end
 local function unlock_group_tag(msg, data, target)
@@ -481,7 +481,7 @@ local function lock_group_welcome(msg, data, target)
   else
     data[tostring(target)]['settings']['welcome'] = '✅'
     save_data(_config.moderation.data, data)
-    return 'پیام خوش امد گویی فعال شد'
+    return '✅ پیام خوش آمد گویی فعال شد.'
   end
 end
 
@@ -509,7 +509,7 @@ local function lock_group_chatrobot(msg, data, target)
   else
     data[tostring(target)]['settings']['chat'] = '✅'
     save_data(_config.moderation.data, data)
-    return 'چت با ربات فعال شد'
+    return '✅ چت با ربات فعال شد.'
   end
 end
 
@@ -537,7 +537,7 @@ local function lock_group_kickme(msg, data, target)
   else
     data[tostring(target)]['settings']['kickme'] = '✅'
     save_data(_config.moderation.data, data)
-    return 'دستور kickme فعال شد'
+    return '✅ قفل دستور kickme فعال شد.'
   end
 end
 
@@ -565,7 +565,7 @@ local function lock_group_sticker(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_sticker'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'ضد استیکر فعال شد'
+    return '✅ قفل استیکر فعال شد.'
   end
 end
 
@@ -593,7 +593,7 @@ local function lock_group_contacts(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_contacts'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'ضد اشتراک گذاشتن مخاطب فعال شد'
+    return '✅ قفل مخاطبین فعال شد.'
   end
 end
 
@@ -680,7 +680,7 @@ local function set_public_membermod(msg, data, target)
     data[tostring(target)]['settings']['public'] = 'yes'
     save_data(_config.moderation.data, data)
   end
-  return 'گروه عمومی شد'
+  return '✅ گروه عمومی شد.'
 end
 
 local function unlock_group_porn(msg, data, target)
@@ -726,7 +726,7 @@ local function unset_public_membermod(msg, data, target)
     data[tostring(target)]['settings']['public'] = 'no'
 	data[tostring(target)]['long_id'] = msg.to.long_id 
     save_data(_config.moderation.data, data)
-    return 'گروه خصوصی شد'
+    return '✅ گروه خصوصی شد.'
   end
 end
 
