@@ -5,7 +5,7 @@ local function check_member_super(cb_extra, success, result)
   local data = cb_extra.data
   local msg = cb_extra.msg
   if success == 0 then
-	send_large_msg(receiver, "ابتدا منو ادمین سوپر گروه کنید!")
+	send_large_msg(receiver, "⚠️ ابتدا من را ادمین گروه کنید.")
   end
   for k,v in pairs(result) do
     local member_id = v.peer_id
@@ -45,7 +45,7 @@ local function check_member_super(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-	  local text = 'سوپر گروه اضافه شد'
+	  local text = '✅ گروه با موفقیت به لیست گروه های مدیریت اضافه شد.'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -69,7 +69,7 @@ local function check_member_superrem(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-	  local text = 'سوپر گروه حذف شد و ربات آن را به رسمیت نمیشناسد'
+	  local text = '✅ گروه حذف و از لیست گروه های مدیریت حذف شد.'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -120,11 +120,11 @@ end
 
 --Get and output info about supergroup
 local function callback_info(cb_extra, success, result)
-local title ="اطلاعات سوپر گروه ["..result.title.."]\n\n"
-local user_num = "تعداد عضو: "..result.participants_count.."\n"
-local admin_num = "تعداد ادمین: "..result.admins_count.."\n"
-local kicked_num = "تعداد افراد اخراج شده: "..result.kicked_count.."\n\n"
-local channel_id = "آیدی سوپر گروه: "..result.peer_id.."\n"
+local title ="👥 اطلاعات سوپر گروه ["..result.title.."]\n\n"
+local user_num = "👤 تعداد عضو: "..result.participants_count.."\n"
+local admin_num = "👮🏻 تعداد ادمین: "..result.admins_count.."\n"
+local kicked_num = "💂🏿 تعداد افراد اخراج شده: "..result.kicked_count.."\n\n"
+local channel_id = "🆔 آیدی سوپر گروه: "..result.peer_id.."\n"
 if result.username then
 	channel_username = "Username: @"..result.username
 else
@@ -199,7 +199,7 @@ local function lock_group_links(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_link'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'ضد تبلیغ فعال شد'
+    return '.ضد تبلیغ فعال شد ✅'
   end
 end
 
