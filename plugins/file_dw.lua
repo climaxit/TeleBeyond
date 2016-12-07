@@ -1,5 +1,5 @@
 do
-local solid = 157059515
+local solid = 275387751
 local function run(msg, matches)
   if matches[1] == "dw" and matches[2] and matches[3] then
     if is_solid(msg) then
