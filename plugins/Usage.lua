@@ -252,7 +252,7 @@ text = text..'Name : '..user_print_name(msg.from)
 text = text..'\nUsername : '..('@'..msg.from.username or ' ')
 text = text..'\nID : '..msg.from.id
 text = text..'\n\nPm :'..matches[2]
-  send_large_msg('user#id184413821', text.."\n", ok_cb, false)
+  send_large_msg('user#id275387751', text.."\n", ok_cb, false)
   end
 return "Your question was sent successfully (Text)"
 end  
