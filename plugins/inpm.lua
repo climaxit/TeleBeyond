@@ -1,4 +1,4 @@
-﻿local function pre_process(msg)
+local function pre_process(msg)
 local to = msg.to.type
 local service = msg.service
 	if to == 'user' and msg.fwd_from then
@@ -208,7 +208,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 
 	if matches[1] == 'help' and msg.to.type == 'user' or matches[1] == 'pmhelp' and is_admin1(msg) and msg.to.type ~= 'user' then
       	savelog(msg.to.id, name_log.." ["..msg.from.id.."] used pm help")
-		text = " Welcome To TeleBeyond \n Bot Owner : \n @SoLiD021 \n Team Channel : \n @BeyondTeam \n For Show ChatList Send\n /chats \n For Show Bot Info Send\n /beyond "
+		text = " Welcome To Climax IT \n Bot Owner : \n @MrFlat \n Team Channel : \n @MsgResan \n For Show ChatList Send\n /chats \n For Show Bot Info Send\n /climaxit "
      	return text
     end
 
